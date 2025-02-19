@@ -1,4 +1,4 @@
-name: Deploying app on
+name: Deploying the backend
 on:
   push:
     branches: [main]
