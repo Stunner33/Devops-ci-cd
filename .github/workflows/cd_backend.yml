@@ -20,6 +20,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockefile.backend
+          file: ./docker/Dockerfile.backend
           push: true
           tags: Devops-ci-cd/todo-app-backend:${{ github.sha }}
