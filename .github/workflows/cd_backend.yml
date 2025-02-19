@@ -1,0 +1,25 @@
+name: Deploying app on
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking the code
+        uses: actions/checkout@v2
+
+      - name: Login to Docker
+        uses: docker/login-action@v2
+        with:
+          username: ${{DOCKERHUB_USERNAME}}
+          password: ${{DOCKERHUB_PASSWORD}}
+
+      - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./docker/Dockefile.backend
+          push: true
+          tags: Devops-ci-cd/todo-app-backend:${{ github.sha }}
