@@ -22,4 +22,4 @@ jobs:
           context: .
           file: ./docker/Dockerfile.backend
           push: true
-          tags: devops-ci-cd/todo-app-backend:${{ github.sha }}
+          tags: roxs33/todo-app-backend:${{ github.sha }}
