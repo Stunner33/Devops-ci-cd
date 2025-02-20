@@ -20,14 +20,9 @@
   "engines": {
     "node": ">=18"
   },
-  "exports": {
-	"./client": "./index.ts"
-},
   "packageManager": "bun@1.2.2",
   "workspaces": [
     "apps/*",
     "packages/*"
   ]
-
-
 }

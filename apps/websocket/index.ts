@@ -1,4 +1,4 @@
-import { prismaClient } from "db";
+import { prismaClient } from "db/client";
 
 Bun.serve({
   port: 8081,
